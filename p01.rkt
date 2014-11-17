@@ -7,7 +7,7 @@
 
 (define (my-last lst)
   (if (null? lst)
-      '()
+      lst
       (if (null? (cdr lst))
           (car lst)
           (my-last (cdr lst)))))
@@ -24,12 +24,6 @@
     [(or (empty? lst) (empty? (rest lst))) lst]
     [else (my-last-3 (rest lst))]))
 
-(my-last '(1 2))
-(my-last '())
-(my-last-2 '(1 2))
-(my-last-2 '())
-(my-last-3 '())
-(my-last-3 '(1 2))
-
+(provide my-last)
 (provide my-last-2)
 (provide my-last-3)
